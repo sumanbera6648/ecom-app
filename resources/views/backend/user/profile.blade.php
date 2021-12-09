@@ -59,14 +59,7 @@
                                         </path>
                                     </svg>91+ {{ $profile->phone }}
                                 </li>
-                                <li class="contacts-block__item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-map-pin">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                        <circle cx="12" cy="10" r="3"></circle>
-                                    </svg>{{ $profile->country }}
-                                </li>
+
                                 <li class="contacts-block__item">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -180,15 +173,7 @@
                                                         <span class="text-danger">{{ $message }}</span>
                                                     @enderror
                                                 </div>
-                                                <div class="form-group">
-                                                    <label for="profession">Country</label>
-                                                    <input type="text" name="country" id="country"
-                                                        placeholder="country name" class="form-control mb-4" id="profession"
-                                                        placeholder="Designer" value="{{ $profile->country }}">
-                                                    @error('email')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                    @enderror
-                                                </div>
+
                                                 <div class="form-group">
                                                     <label for="profession">Post Code</label>
                                                     <input type="text" name="post_code" id="post_code"
@@ -241,23 +226,23 @@
 @push('scripts')
 
 
-<script>
-    $('.widget-content .mixin').on('click', function () {
-    const toast = swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000,
-    padding: '2em'
-    });
+    <script>
+        $('.widget-content .mixin').on('click', function() {
+            const toast = swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                padding: '2em'
+            });
 
-    toast({
-    type: 'success',
-    title: 'Account Updated is successfully',
-    padding: '2em',
-    })
+            toast({
+                type: 'success',
+                title: 'Account Updated is successfully',
+                padding: '2em',
+            })
 
-    })
+        })
     </script>
 
 @endpush

@@ -77,12 +77,8 @@ class OrderController extends Controller
     public function update(Request $req)
     {
             $stud_id = $req->input('editStaus');
-
             $pcat_update = Order::find($stud_id);
-            // dd($pcat_update);
-            // exit;
             $pcat_update->status = $req->status;
-
             $pcat_update->update();
             return redirect()->route('order.index');
     }

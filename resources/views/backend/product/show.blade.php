@@ -34,8 +34,8 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $product ->title }}</td>
-                                <td>{{ $product->category->title }}</td>
-                                <td>{{ $product->brand->title}}</td>
+                                {{-- <td>{{ $product->category->title }}</td>
+                                <td>{{ $product->brand->title}}</td> --}}
                                 {{-- <td>{{ $product ->category ->title}}</td>
                                 <td>{{ $product ->brand ->title}}</td> --}}
                                 {{-- <td>{{ $product->is_featured}}</td> --}}

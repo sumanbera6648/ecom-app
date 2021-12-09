@@ -25,16 +25,60 @@
             </ul>
 
             <ul class="navbar-item flex-row ml-md-auto">
-
+                {{-- dark mood --}}
                 <li class="nav-item dropdown language-dropdown">
-                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="{{asset('assets/img/ca.png')}}" class="flag-width" alt="flag">
-                    </a>
-                    <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
-                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('assets/img/de.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
-                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('assets/img/jp.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Japanese</span></a>
-                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('assets/img/fr.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;French</span></a>
-                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="{{asset('assets/img/ca.png')}}" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+
+                    <!-- SOCIAL PANEL HTML -->
+                    <div class="social-panel-container">
+                        <div class="social-panel">
+                            <p>Created with <i class="fa fa-heart"></i> by
+                                <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+                            </p>
+                            <button class="close-btn"><i class="fas fa-times"></i></button>
+                            <h4>Get in touch on</h4>
+                            <ul>
+                                <li>
+                                    <a href="https://www.patreon.com/florinpop17" target="_blank">
+                                        <i class="fab fa-discord"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/florinpop1705" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://linkedin.com/in/florinpop17" target="_blank">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://facebook.com/florinpop17" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/florinpop17" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="floating-btn">
+                        Get in Touch
+                    </button>
+
+                    <div class="floating-text">
+                        Part of <a href="https://florin-pop.com/blog/2019/09/100-days-100-projects" target="_blank">#100Days100Projects</a>
                     </div>
                 </li>
 
@@ -75,7 +119,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </a>
                             <a class="dropdown-item">
@@ -92,7 +136,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </a>
                         </div>
@@ -135,10 +179,9 @@
                         </div>
                     </div>
                 </li>
-                {{-- <li class="nav-item dropdown user-profile-dropdown">
-                    <div class="mr-2 d-none d-lg-inline text-gray-600 small"> {{ Auth::user()->name }}</div>
+                <li class="nav-item dropdown user-profile-dropdown">
 
-                </li> --}}
+                </li>
 
                 <li class="nav-item dropdown user-profile-dropdown">
 
@@ -228,10 +271,9 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-                  
+
                 </div>
-                
+
             </div>
         </div>
     </div>
-    

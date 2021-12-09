@@ -184,7 +184,7 @@
                                                     <div class="product-content">
                                                         <h3><a href="product-details.html">{{ $product->title }}</a></h3>
                                                         <h3><a href="product-details.html">{{ $product->size }}</a></h3>
-                                                        <h3><a href="product-details.html">{{ $product->brand->title }}</a></h3>
+                                                        {{-- <h3><a href="product-details.html">{{ $product->brand->title }}</a></h3> --}}
                                                         <div class="product-price">
                                                             @php
                                                                 $after_discount = $product->price - ($product->price * $product->discount) / 100;

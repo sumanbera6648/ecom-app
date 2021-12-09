@@ -74,26 +74,21 @@
         <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <form class="" method="post" action="{{url('modal-update')}}">
+                <form class="" method="post" action="{{route('modal_update')}}">
                     @method('put')
                     @csrf
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                         </div>
-                        <input type="hidden" id="editStaus" name="editStaus" value="" />
+                        <input type="hidden" id="editStaus" name="editStaus" value="{{$data->id}}" />
                         <div class="modal-body">
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="status" name="status">
                                     <option value="new" {{(($data->status=='new') ? 'selected' : '')}}>New</option>
-                                    <option value="Process" {{(($data->status=='Process') ? 'selected' : '')}}>Process</option>
+                                    <option value="process" {{(($data->status=='process') ? 'selected' : '')}}>Process</option>
                                     <option value="delivered" {{(($data->status=='delivered') ? 'selected' : '')}}>Delivered</option>
                                     <option value="cancel" {{(($data->status=='cancel') ? 'selected' : '')}}>Cancel</option>
-                                    {{-- <option selected>Choose...</option>
-                                    <option class="btn-danger" value="1">New</option>
-                                    <option value="2">Process</option>
-                                    <option value="3">Delivered</option>
-                                    <option value="4">cancel</option> --}}
                                 </select>
                             </div>
                         </div>
@@ -113,11 +108,10 @@
         $(document).ready(function(){
            $(document).on('click','.edit',function(){
                var editStaus = $(this).val();
-            //    alert(editStaus);
                 $('#editModal').modal('show');
                 $.ajax({
                     type: "GET",
-                    url: "/edit-status/"+editStaus,
+                    url: "/admin/edit-status/"+editStaus,
                     success: function(response){
                         console.log(response.order);
                         $('#status').val(response.order.status);

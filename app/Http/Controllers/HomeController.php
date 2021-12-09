@@ -38,7 +38,6 @@ class HomeController extends Controller
         $profile_update->name = $req->name;
         $profile_update->email = $req->email;
         $profile_update->phone = $req->phone;
-        $profile_update->country = $req->country;
         $profile_update->post_code = $req->post_code;
         $profile_update->address = $req->address;
         $old_photo = $req->input('old_photo');

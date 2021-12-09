@@ -14,7 +14,7 @@ use App\Http\Controllers\CouponsController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +38,7 @@ Route::post('user/register',[App\Http\Controllers\FrontendController::class,'reg
 Route::get('/home', [App\Http\Controllers\FrontendController::class, 'index']);
 
 
+
 Auth::routes();
 
 
@@ -58,8 +59,12 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('coupon', CouponsController::class);
     Route::resource('message', MessageController::class);
     Route::get('invoice', [OrderController::class,'invoice_view'])->name('invoice_view');
-    Route::get('edit-status/{id}', [OrderController::class,'edit']);
-    Route::put('modal-update', [OrderController::class,'update']);
+    Route::get('/edit-status/{id}', [OrderController::class,'edit']);
+    Route::put('modal-update', [OrderController::class,'update'])->name('modal_update');
+    Route::get('/employees', [EmployeeController::class,'index'])->name('employees.index');
+    Route::post('/employees', [EmployeeController::class,'store'])->name('employees.store');
+    Route::get('employee-edit/{id}', [EmployeeController::class,'edit'])->name('employees.edit');
+    Route::put('employee-update', [EmployeeController::class,'update'])->name('employees.update');
     //
     //cart sections
 
