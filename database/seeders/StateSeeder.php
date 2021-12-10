@@ -43,6 +43,14 @@ class StateSeeder extends Seeder
             'state' =>'Uttar Pradesh',
             'country_id'=>'1'
         ],
+        [
+            'state' =>'United States',
+            'country_id'=>'2'
+        ],
+        [
+            'state' =>'Alberta',
+            'country_id'=>'3'
+        ],
        ];
        foreach($state as $state){
            State::create([

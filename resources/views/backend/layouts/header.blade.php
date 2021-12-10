@@ -26,7 +26,7 @@
 
             <ul class="navbar-item flex-row ml-md-auto">
                 {{-- dark mood --}}
-                <li class="nav-item dropdown language-dropdown">
+                {{-- <li class="nav-item dropdown language-dropdown">
                     <div>
                         <input type="checkbox" class="checkbox" id="chk" />
                         <label class="label" for="chk">
@@ -80,7 +80,7 @@
                     <div class="floating-text">
                         Part of <a href="https://florin-pop.com/blog/2019/09/100-days-100-projects" target="_blank">#100Days100Projects</a>
                     </div>
-                </li>
+                </li> --}}
 
                 <li class="nav-item dropdown message-dropdown">
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

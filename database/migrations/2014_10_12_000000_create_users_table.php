@@ -23,12 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('post_code')->nullable();
             $table->string('address')->nullable();
-            
+            $table->string('city')->nullable();
             $table->enum('role',['admin','user'])->default('user');
             $table->string('provider')->nullable();
             $table->string('provider_id')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
-            // $table->string('sesvalue');
             $table->rememberToken()->nullable();
             $table->timestamps();
         });

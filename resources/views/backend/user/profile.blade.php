@@ -197,13 +197,18 @@
                                                 <div class="form-group">
                                                     <label for="profession">Photo</label>
                                                     <input type="hidden" name="old_photo" value="{{ $profile->photo }}">
-                                                    <input type="file" name="photo" id="email" placeholder="email"
+                                                    <input type="file" name="photo" id="image_input" placeholder="email"
                                                         class="form-control mb-4" id="profession" placeholder="Designer"
                                                         value="{{ $profile->photo }}">
                                                     @error('photo')
                                                         <span class="text-danger">{{ $message }}</span>
                                                     @enderror
                                                 </div>
+                                                <div class="form-group">
+                                                    <label for="profession">Show Photo</label>
+                                                    <div id="display_image"></div>
+                                                </div>
+
                                                 {{-- <button type="submit" class="btn btn-success mb-2">Update</button> --}}
                                                 <button type="submit" class="mr-2 btn btn-primary  mixin">Updated</button>
                                             </div>
@@ -243,6 +248,19 @@
             })
 
         })
+    </script>
+    <script>
+        const image_input = document.querySelector("#image_input");
+        var uploaded_image;
+
+        image_input.addEventListener('change', function() {
+            const reader = new FileReader();
+            reader.addEventListener('load', () => {
+                uploaded_image = reader.result;
+                document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+            });
+            reader.readAsDataURL(this.files[0]);
+        });
     </script>
 
 @endpush

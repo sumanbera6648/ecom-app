@@ -17,7 +17,14 @@ class CountrySeeder extends Seeder
         $country = [
             [
                'country' =>'India',
-            ]
+            ],
+            [
+                'country' =>'USA',
+            ],
+            [
+                'country' =>'Canada',
+            ],
+
         ];
         foreach ($country as $country){
             Country::create([

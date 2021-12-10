@@ -15,4 +15,13 @@
     <link rel="stylesheet" href="{{asset('users/assets/css/style.css')}}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('users/assets/images/favicon.ico')}}" />
+    <style>
+        #display_image{
+  width: 150px;
+  height: 80px;
+  border: 1px solid black;
+  background-position: center;
+  background-size: cover;
+}
+        </style>
   </head>

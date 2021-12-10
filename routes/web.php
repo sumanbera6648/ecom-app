@@ -85,11 +85,13 @@ Route::group(['prefix'=>'/user','middleware'=>['user']],function(){
     // Route::get('/', [App\Http\Controllers\FrontendController::class, 'home'])->name('users_view');
     Route::get('/',[App\Http\Controllers\UsersController::class, 'index'])->name('user');
     Route::get('/profile',[App\Http\Controllers\UsersController::class, 'profile'])->name('user_profile');
+    Route::get('/getState/{id}',[App\Http\Controllers\UsersController::class, 'getState']);
     Route::post('/profile', [App\Http\Controllers\UsersController::class, 'profile_update'])->name('user-profile-update');
     Route::get('/myorder',[App\Http\Controllers\UsersController::class, 'my_order'])->name('my-order');
     Route::get('cart', [CartController::class, 'index'])->name('cart');
     Route::get('/add-to-cart/{product}', [CartController::class,'addToCart'])->name('add-cart');
     Route::get('/remove/{id}', [CartController::class,'removeFromCart'])->name('remove');
     Route::get('/change-qty/{product}', [CartController::class,'changeQty'])->name('change_qty');
+    // Route::get('/country',[App\Http\Controllers\UsersController::class, 'country']);
 
 });

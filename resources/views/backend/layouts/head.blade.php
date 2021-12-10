@@ -11,7 +11,7 @@
     <link href="{{asset('assets/css/loader.css')}}" rel="stylesheet" type="text/css" />
     <script src="{{asset('assets/js/loader.js')}}"></script>
     {{-- dark mood --}}
-    <link href="{{asset('assets/css/darkmood.css')}}" rel="stylesheet" type="text/css" />
+    {{-- <link href="{{asset('assets/css/darkmood.css')}}" rel="stylesheet" type="text/css" /> --}}
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -39,6 +39,16 @@
     <link href="{{asset('plugins/notification/snackbar/snackbar.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('assets/css/apps/invoice.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css" />
+    <style>
+    #display_image{
+        width: 150px;
+        height: 80px;
+        border: 1px solid black;
+        background-position: center;
+        background-size: cover;
+      }
+
+        </style>
 
 
 

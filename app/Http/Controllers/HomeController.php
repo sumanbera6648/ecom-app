@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Country;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,7 +30,8 @@ class HomeController extends Controller
     }
     public function profile(){
         $profile = Auth()->user();
-        return view('backend.user.profile',compact('profile'));
+        $country = Country::all();
+        return view('backend.user.profile',compact('profile','country'));
     }
 
 
@@ -40,6 +42,7 @@ class HomeController extends Controller
         $profile_update->phone = $req->phone;
         $profile_update->post_code = $req->post_code;
         $profile_update->address = $req->address;
+        
         $old_photo = $req->input('old_photo');
         if (!empty($req->file('photo'))) {
             $profileimage = $req->file('photo');

@@ -11,7 +11,7 @@
 
                 <h5 class="mt-5">Products Data Table</h5>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#empModal">
-                    Launch demo modal
+                    Add Employee
                 </button>
                 <div class="table-responsive mb-4 mt-4">
                     <table class="multi-table table table-hover" style="width:100%">
@@ -30,14 +30,14 @@
                             @foreach ($employee as $data)
 
                             <tr>
-                                <th>{{ $data->id }}</th>
+                                <th>{{ $loop->iteration }}</th>
                                 <th>{{ $data->name }}</th>
                                 <th>{{ $data->email}} </th>
                                 <th>Address</th>
                                 <td class="text-center">
-                                    {{-- <a class="btn btn-primary" href="#">View</a> --}}
+                                    <a class="btn btn-primary" href="#">View</a>
                                     <button type="button" class="btn btn-primary" id="edit" value="{{ $data->id }}">
-                                        Edit Status
+                                        Edit Employee
                                 </button>
                                 </td>
                             </tr>

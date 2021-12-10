@@ -25,6 +25,7 @@
 <!-- Custom js for this page -->
 <script src="{{asset('users/assets/js/dashboard.js')}}"></script>
 <script src="{{asset('users/assets/js/todolist.js')}}"></script>
+@stack('scripts')
 <!-- End custom js for this page -->
 </body>
 </html>
