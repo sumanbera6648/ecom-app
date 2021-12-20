@@ -18,7 +18,6 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Brand Name</th>
-                                {{-- <th>Is Featured</th> --}}
                                 <th>Price</th>
                                 <th>Discount(%)</th>
                                 <th>Size</th>
@@ -34,11 +33,9 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $product ->title }}</td>
-                                {{-- <td>{{ $product->category->title }}</td>
-                                <td>{{ $product->brand->title}}</td> --}}
-                                {{-- <td>{{ $product ->category ->title}}</td>
-                                <td>{{ $product ->brand ->title}}</td> --}}
-                                {{-- <td>{{ $product->is_featured}}</td> --}}
+                                {{-- <td>{{$product->description }}</td> --}}
+                                <td>{{$product->category->title}}</td>
+                                <td>{{$product->brand->title}}</td>
                                 <td>{{ $product->price}}</td>
                                 <td>{{ $product->discount}} %</td>
                                 <td>{{ $product->size }}</td>

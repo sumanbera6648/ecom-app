@@ -17,11 +17,10 @@
                                 <th>Order No.</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                {{-- <th>Phone</th>
-                                <th>Post Code</th> --}}
                                 <th>Address</th>
                                 <th>Product Name</th>
                                 <th>Quantity</th>
+                                <th>Role</th>
                                 <th>Total Amount</th>
                                 <th>Status</th>
                                 <th>Action</th>
@@ -34,12 +33,10 @@
                                     <th>{{ $data->order_number }}</th>
                                     <th>{{ $data->user->name }}</th>
                                     <th>{{ $data->user->email }}</th>
-                                    {{-- <th>{{$data->user->phone}}</th>
-                                <th>{{$data->user->post_code}}</th> --}}
-                                    <th>{{ $data->user->address }}</th>
-                                    <th>{{ $data->product_id }}</th>
-                                    {{-- <th>{{ $data->product->title }}</th> --}}
+                                    <th>{{$data->user->post_code}} , {{ $data->user->address }} , {{$data->user->phone}}</th>
+                                    <th>{{ $data->product->title }}</th>
                                     <th>{{ $data->quantity }}</th>
+                                    <th>{{ $data->user->role }}</th>
                                     <th>{{ $data->total_amount }}</th>
                                     <th>{{ $data->status }}</th>
                                     <td class="text-center">

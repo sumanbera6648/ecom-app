@@ -39,4 +39,18 @@
 <link rel="stylesheet" href="{{asset('frontend/style.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+.badge-notify{
+background:red;
+position:relative;
+top: -20px;
+right: 10px;
+}
+.my-cart-icon-affix {
+position: fixed;
+z-index: 999;
+}
+</style>
+
 
