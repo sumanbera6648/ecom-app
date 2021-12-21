@@ -46,6 +46,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
     Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('admin_profile');
     Route::post('/profile', [App\Http\Controllers\HomeController::class, 'profile_update'])->name('profile-update');
+    Route::get('/users', [App\Http\Controllers\HomeController::class, 'usershow'])->name('users.index');
+    // Route::get('users/list', [App\Http\Controllers\HomeController::class, 'getStudents'])->name('students.list');
     Route::resource('banner', BannerController::class);
     Route::resource('brand', BrandController::class);
     Route::resource('category', CategoryController::class);

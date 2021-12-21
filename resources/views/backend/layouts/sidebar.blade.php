@@ -248,9 +248,9 @@
                     <li>
                         <a href="{{route('admin_profile')}}"> Profile </a>
                     </li>
-                    {{-- <li>
-                        <a href="#"> Account Settings </a>
-                    </li> --}}
+                    <li>
+                        <a href="{{route('users.index')}}"> Account Settings </a>
+                    </li>
                 </ul>
             </li>
 

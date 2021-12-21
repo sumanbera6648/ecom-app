@@ -157,16 +157,5 @@
     })
 </script>
 @endpush
-{{-- <tr>
-    <th>S.N.</th>
-    <th>Order No.</th>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Product Name</th>
-    <th>Quantity</th>
-    <th>Total Amount</th>
-    <th>Status</th>
-    <th>Action</th>
-    </tr> --}}
 
 
